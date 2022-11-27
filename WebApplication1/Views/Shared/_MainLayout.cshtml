@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1" />
+
+    <title>@ViewBag.Title</title>
+
+    <!--<link href="~/Content/bootstrap.min.css" rel="stylesheet" />-->
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div>
+        <!--Start Navbar -->
+        <!--navbar toogle-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="~/Home" class="navbar-brand">
+                        Freelancer
+                    </a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class=" nav navbar-nav">
+                        <li>
+                            <a href="~/Home">
+                                <i class=" glyphicon glyphicon-home"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="~/Home/About">
+                                <i class=" 	glyphicon glyphicon-info-sign"></i>
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="~/Home/Contact">
+                                <i class=" 	glyphicon glyphicon-earphone"></i>
+                                Contact Us
+                            </a>
+                        </li>
+
+                        <li>
+                            @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+                            {
+                                <input type="text" name="searchName" id="searchName" placeholder="Search" />
+                            }
+
+
+                        </li>
+                    </ul>
+
+                    @Html.Partial("_Login")
+                </div>
+
+            </div>
+        </nav>
+        <!--End Navbar -->
+        <!--Start Body-->
+        <div class="container">
+            <div class="row" style="min-height:380px">
+                @RenderBody()
+            </div>
+        </div>
+        <!--End Body -->
+        <!--Start Footer-->
+        <footer class="myfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                            About Us
+                        </h3>
+                        <p class="footerP">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-globe"></i>
+                            Important Links
+                        </h3>
+                        <ul>
+                            <li><a href="#">Public sector jobs</a></li>
+                            <li><a href="#">Private sector jobs</a></li>
+                            <li><a href="#">Jobs outside the country</a></li>
+                            <li><a href="#">Various Jobs</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            <i class=" 	glyphicon glyphicon-earphone"></i>
+                            Contact us
+                        </h3>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">YouTube</a></li>
+                            <li><a href="#">Leave Message</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="subfooter">
+                <span>Copyright © 2022 Freelancer</span>
+            </div>
+        </footer>
+    </div>
+
+    <!--End Footer-->
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", required: false);
+
+</body>
+</html>

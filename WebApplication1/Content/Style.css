@@ -1,0 +1,152 @@
+﻿
+@font-face {
+    font-family: myFont;
+    src: url('font/GE_SS_Two_Bold.woff')
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url('font/HelveticaNeueW23-Reg.ttf')
+}
+
+@font-face {
+    font-family: myFont3;
+    src: url('font/FontAwesome.otf')
+}
+
+body {
+    padding-top: 120px;
+    font-family: myFont3;
+}
+/*navbar style*/
+
+@media (min-width: 768px) {
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+        padding-top: 25px;
+        font-size: 23px;
+        font-weight: bold;
+        color: #2BCC71;
+    }
+}
+
+.navbar-default {
+    background-color: #252f31;
+    color: #FFF;
+}
+
+    .navbar-default .navbar-nav > li > a {
+        color: #F7F7F7;
+        padding-left: 30px;
+        font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover {
+            color: #2BCC71;
+        }
+
+.nav > li {
+    height: 70px;
+    padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: left;
+        margin: 0;
+        padding-left: 20px;
+    }
+}
+
+.glyphicon {
+    padding-right: 6px;
+    font-size: 16px;
+}
+/*footer style*/
+.myfooter {
+    background-color: #252f31;
+    padding-top: 10px;
+    font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-align: justify;
+    margin-bottom: -20px;
+}
+
+    .myfooter a, p.footerP {
+        color: azure;
+    }
+
+    .myfooter h3, ul, p {
+        margin-bottom: 20px;
+        font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+        color: white;
+    }
+
+.subfooter {
+    background-color: #191E22;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+/*Logo style*/
+/*dont forget to make it responsive*/
+.logo-size {
+    height: 62px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: -12px;
+    background-color: white;
+}
+/*shared layout style*/
+.lead {
+    color: black;
+}
+
+#searchName {
+    width: 130px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    background-image: url('../images/Search_Icon.png');
+    background-repeat: no-repeat;
+    background-position: 90px 5px;
+    background-size: 25px 25px;
+    padding: 7px 20px 7px 12px;
+    transition: width 0.4s ease-in-out;
+    margin-top: 8px;
+    margin-left: 28px;
+    color: black;
+}
+
+    #searchName:focus {
+        width: 100%;
+    }
+
+.img-size {
+    font-size: 90px;
+}
+
+.navbar-user {
+    padding: 10px;
+    padding-bottom: 0px;
+    width: 350px;
+}
+
+@media (min-width: 992px) {
+    .col-md-3 {
+        width: 23%;
+    }
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #2BCC71;
+    border-color: #2BCC71;
+    font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #2BCC71;
+        border-color: #2BCC71;
+    }
